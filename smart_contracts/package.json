@@ -1,0 +1,28 @@
+{
+  "name": "blockchain-todo",
+  "version": "1.0.0",
+  "description": "A todo app written in solidity",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "compile":"truffle compile",
+    "migrate":"truffle migrate --reset && npm run migrateAbi",
+    "migrateAbi":"node migrateAbi.js ./build/contracts/ ../lib/abi"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "lite-server": "^2.6.1",
+    "truffle": "^5.3.8",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.3.6"
+  }
+}
